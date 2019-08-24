@@ -25,7 +25,7 @@ function onRefreshView(event) {
 
   if (text.value.length >= 1) {
     // console.log ('Ignore refresh. TXTMSG has any messsage.');
-  } else if ((command.value != '') && (command.value != 'MSG')){
+  } else if ((command.value != 'MSG') && (command.value != 'MSG0')) {
     // console.log ('Ignore refresh. Any COMMAND is selected.');
   } else if (target.value != ''){
     // console.log ('Ignore refresh. Any CMBPLAYER is selected.');
@@ -36,8 +36,8 @@ function onRefreshView(event) {
     form.submit();
   }
 
-  setTimeout(onRefreshView, 2000);
+  setTimeout(onRefreshView, 10000);
 }
-setTimeout(onRefreshView, 2000);
+setTimeout(onRefreshView, 10000);
 
-setInterval(onLogLoad, 100);
+setInterval(onLogLoad, 1000);
